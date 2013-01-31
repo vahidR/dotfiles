@@ -75,4 +75,21 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 "set autoindent
 ":syntax on
 
+" Automatic reloading of .vimrc
+autocmd! bufwritepost .vimrc source %
 
+" Mouse and BackSpace
+"set mouse=a
+set bs=2 " set backSpace behave like normal again
+
+"Rebind <Leader> Key
+let mapleader=","
+
+" Easier moving between tabs
+map <Leader>n <esc>:tabprevious<CR>
+map <Leader>m <esc>:tanext><CR>
+
+" Disable stupid backup and swap files
+set nobackup
+set nowritebackup
+set noswapfile
