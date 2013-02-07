@@ -90,7 +90,7 @@ alias gst='git status'
 alias gco='git commit'
 alias gpull='git pull'
 alias gpush='git push'
-alias gf='git fetch upstream'
+alias gf="git fetch upstream"
 
 alias cls='clear'
 alias reboot='sudo reboot'
