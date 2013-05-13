@@ -12,13 +12,18 @@ filetype indent on
 filetype plugin on
 
 " pathogen infrastructure 
-execute pathogen#infect()
+"execute pathogen#infect()
+call pathogen#infect()
+
 
 " Case insensitive search
 set ignorecase " Case insensitive search
 
 " Higlhight search
 set hlsearch 
+
+" better paste without indentation
+"set paste
 
 " Wrap text instead of being on one line
 set lbr 
@@ -66,6 +71,10 @@ map P :TlistToggle<CR>
 
 "code omni
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
 
 " PEP recommendation
 "set textwidth=79
@@ -75,21 +84,42 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 "set autoindent
 ":syntax on
 
+"set spell spelllang=en_us
+
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
 " Mouse and BackSpace
-"set mouse=a
+set mouse=a
 set bs=2 " set backSpace behave like normal again
+
+"Trick for working with remote hosts as well
+set ttymouse=xterm2
+behave xterm
+set selectmode=mouse
+
 
 "Rebind <Leader> Key
 let mapleader=","
 
 " Easier moving between tabs
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tanext><CR>
+map <F2> :tabnew<CR>
+map <F3> gt
+"map <Leader>n <esc>:tabprevious<CR>
+"map <Leader>m <esc>:tanext><CR>
+
+" easier moving of code blocks
+vnoremap < <gv " better indentation 
+vnoremap > >gv " better indentation
 
 " Disable stupid backup and swap files
 set nobackup
 set nowritebackup
 set noswapfile
+
+" Django template highlight
+setfiletype django
+
+
+"NERDTree mapping
+map <F5> :NERDTreeToggle<CR>
