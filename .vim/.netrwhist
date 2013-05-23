@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/vahid/projects/addressbook'
+let g:netrw_dirhist_2='/home/vahid/projects/idea/idea/settings'
+let g:netrw_dirhist_3='/home/vahid/projects/idea/idea/apps/idea'
