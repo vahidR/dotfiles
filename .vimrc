@@ -22,8 +22,8 @@ set ignorecase " Case insensitive search
 " Higlhight search
 set hlsearch 
 
-" better paste without indentation
-"set paste
+" set paste toggle to F2
+set pastetoggle=<F2>
 
 " Wrap text instead of being on one line
 set lbr 
@@ -75,6 +75,9 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
+" extra code completion
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest,preview
 
 " PEP recommendation
 "set textwidth=79
@@ -123,3 +126,14 @@ setfiletype django
 
 "NERDTree mapping
 map <F5> :NERDTreeToggle<CR>
+
+" code folding based on python indentation
+set foldmethod=indent
+set foldlevel=99
+
+
+" PEP-8 
+let g:pep8_map='<leader>8'
+
+
+
