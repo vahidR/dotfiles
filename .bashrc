@@ -90,13 +90,16 @@ alias gst='git status'
 alias gco='git commit'
 alias gpull='git pull'
 alias gpush='git push'
-alias gf="git fetch upstream"
+alias gfetch="git fetch upstream"
+alias gadd="git add"
+alias glol="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
 
 alias cls='clear'
 alias reboot='sudo reboot'
 alias halt='sudo halt'
 
-
+# MATLAB 7
+alias matlab='/home/vahid/MATHWORKS_R2008A/bin/matlab'
 
 ##################################
 # Add an "alert" alias for long running commands.  Use like so:
@@ -121,6 +124,4 @@ fi
 
 
 export EDITOR=vim
-##################################
-# Komodo Edit
-#export PATH="/home/vahid/Komodo-Edit-6/bin:$PATH"
+
